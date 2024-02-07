@@ -1,0 +1,348 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* global  */
+ul {
+    list-style: none;
+  }
+a{
+    text-decoration: none;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 97px;
+   
+}
+/* samall */
+@media (min-width:786px){
+    .container{
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width:992px){
+    .container{
+        width:  970px;
+    }
+}
+/* large */
+@media (min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
+/* start header  */
+header {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-height: 97px;
+    }
+header nav{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+    }
+header nav ul{
+        display: flex;
+    }
+    header nav ul li a {
+        padding: 40px 10px;
+        display: block;
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s;
+        position: relative;
+        z-index: 2;
+    }
+.logo{
+    border: 1px solid;
+    padding:5px 15px;
+    
+}
+.logo:hover{
+    background-color: rgb(207, 207, 207);
+    cursor: pointer;
+}
+.toggle-menu{
+    font-size: 22px;
+}
+@media screen and  (min-width:600px){
+   nav .toggle-menu{
+        display: none;
+    }
+}
+nav ul{
+    
+    display: flex;
+
+}
+@media screen and  (max-width:599px){
+    header nav ul{
+        display: none;
+    }
+    nav .toggle-menu:hover + ul{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+    nav .toggle-menu:hover + ul li a{
+        padding: 10px;
+    }  
+    nav .toggle-menu:hover + ul:hover li {
+        border-bottom: 1px solid blue;
+       /* background-color: gray; */
+    }   
+    
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+nav ul li a:hover{
+    text-decoration: none;
+    color: rgb(117, 117, 117);
+}
+
+
+
+
+
+
+/* End Header */
+
+/*   start herosucces page */
+.herosucces-page{
+    background-color: rgb(114, 72, 241);
+    padding: 30px;
+    display: flex;
+    justify-content:center;
+}
+.herosucces{
+    display: flex;
+    gap: 20px;
+}
+@media screen and  (max-width:600px){
+    .herosucces{
+        flex-direction: column;
+        align-items: center;
+    }
+    .herosucces-text{
+        margin-left: 104px;
+    }
+    
+   
+}
+.herosucces img{
+    width: 300px;
+}
+.herosucces-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: self-start;
+    
+    color: white;
+    /* padding: 10px; */
+   /* background-color: brown; */
+}
+.back-p{
+    background-color:rgb(25, 25, 155) ;
+    color: white;
+    font-weight: bold;
+    padding: 3px;
+}
+.herosucces-text a{
+    margin-top: 10px;
+    text-decoration: none;
+    padding:  10px 20px;
+    border-radius: 5px;
+    background-color: rgb(250, 65, 96);
+}
+
+/* End herosucces page */
+/*  Start About-page */
+.about-page{
+    /* background-color: blue; */
+    text-align: center;
+}
+@media (max-width: 944px) {
+    .about-page{
+      display: none;
+    }
+  }
+.about-text{
+    margin: auto;
+    /* background-color: #c21515; */
+    width: 60%;
+    padding:30px;
+    /* text-align: center; */
+}
+.about-page .about-text p:first-of-type{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: black;
+}
+.about-text	p:nth-of-type(2) {
+    /* color: rebeccapurple; */
+    padding-top: 15px;
+    /* color: red; */
+}
+.about-page .about-text p:nth-of-type(3){
+    padding-top: 30px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: black;
+}
+.numbers{
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.numbers .card p:first-of-type{
+            font-size: 2.5rem;
+            color: #c21515;
+}
+.numbers .card p:last-of-type{
+    padding: 0px;
+    color: black;
+}
+.about-text a  {
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    /* font-weight: 700; */
+    padding-top: 45px;
+    color:  rgb(189, 3, 206);
+    
+}
+/*  End About-page */
+
+/* Start service page */
+.service{
+    padding: 20px;
+}
+.card-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+    /* background-color: red; */
+}
+
+.card-box .text-card{
+    padding-left: 5px;
+    flex-basis: 350px;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+}
+
+.text-card h4{
+    color: red;
+}
+.text-card h5{
+    font-size: 1.2rem;
+    padding-top: 15px; 
+}
+.text-card p{
+    padding-top: 15px;
+}
+.card-box .images img{
+    width: 350px;
+}
+
+/* End service page */
+/* Start configue-page */
+.configue-page {
+    
+    padding: 25px;
+    background-color: rgb(230, 230, 230);
+}
+.configue-line{
+    padding-top: 20px;
+    gap: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    /* background-color: red; */
+    margin: auto;
+    width: 80%;
+}
+.card-line{
+    flex-basis:200px;
+    background-color: white;
+    border-radius: 5px;
+}
+.card-line .images img{
+    width: 250px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.text-card{
+    padding: 10px;
+}
+.card-line  .text-card h2{
+    font-size: 0.9rem;
+    font-weight: 800;
+    padding-top: 15px;
+}
+.card-line  .text-card p{
+    padding-top: 15px;
+}
+/* End configue-page */ 
+/* Start footer */
+footer{
+    background-color: rgb(173, 171, 171);
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+@media screen and  (max-width:600px){
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.footer-link ul{
+    display: block;
+   list-style: none;
+}
+.footer-link ul li{
+    padding: 10px 5px;
+}
+.footer-link ul li:first-of-type{
+   font-weight: 800;
+}
+.footer-link ul li .social img{
+    padding: 0px 10px;
+}
+.last-link ul li{
+  
+    font-weight: 100;
+
+}
+.last-link .social img{
+    border: 1px solid;
+    padding: 5px 5px;
+    border-radius: 50%;
+}
